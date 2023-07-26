@@ -1,0 +1,17 @@
+apiVersion: storage.k8s.io/v1
+
+kind: StorageClass
+
+metadata:
+  name: efs-sc
+
+provisioner: k8s.io/minikube-hostpath 
+
+volumeBindingMode: Immediate
+
+parameters:
+  type: gp2 # This configures SSDs (recommended).
+
+allowVolumeExpansion: true
+
+reclaimPolicy: Retain
