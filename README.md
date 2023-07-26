@@ -19,16 +19,16 @@ sudo apt install mysql-server
 ```
 
 ## Preparation
-1. Change the MySQL root password to base64 and update the `secret-mysql.yaml` file with the encoded password.
+1. Clone this repository:
+   ```bash
+   git clone git@github.com:JonathanS878/k8-mysql-pvc-extresize.git
+   ```
+
+2. Change the MySQL root password to base64 and update the `secret-mysql.yaml` file with the encoded password.
    ```bash
    echo -n 'Sht@DlER424' | base64
    ```
    Copy the output and paste it into the `secret-mysql.yaml` file under `data.MYSQL_ROOT_PASSWORD`.
-
-2. Clone this repository:
-   ```bash
-   git clone git@github.com:JonathanS878/k8-mysql-pvc-extresize.git
-   ```
 
 3. Apply all files using the provided script:
    ```bash
