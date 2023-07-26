@@ -27,7 +27,7 @@ sudo apt install mysql-server
 
 2. Clone this repository:
    ```bash
-   git clone <repository_url>
+   git clone git@github.com:JonathanS878/k8-mysql-pvc-extresize.git
    ```
 
 3. Apply all files using the provided script:
